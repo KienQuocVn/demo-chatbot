@@ -8,6 +8,7 @@ class ChatController extends Controller
 {
     public function chat(Request $req)
     {
+
         $apiKey = env('GROQ_API_KEY', '');
         $model = $req->string('model')->toString() ?: 'llama-3.3-70b-versatile';
         // [{role:'user' | 'system' | 'assistant', content: '...'}];
